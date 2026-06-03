@@ -1,145 +1,154 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f9fa;
-    color: #333;
-    margin: 0;
-    padding: 0;
-  }
+  <title>Kristen Nuesmeyer Portfolio</title>
 
-  header {
-    background-color: #2c3e50;
-    color: white;
-    padding: 30px;
-    text-align: center;
-  }
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+    crossorigin="anonymous"
+  >
 
-  nav {
-    background-color: #e9ecef;
-    padding: 15px;
-    text-align: center;
-  }
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
 
-  nav a {
-    margin: 0 15px;
-    text-decoration: none;
-    color: #2c3e50;
-    font-weight: bold;
-  }
+    header.hero {
+      background: linear-gradient(135deg, #198754, #0d6efd);
+      color: white;
+      padding: 4rem 2rem;
+      border-radius: 1rem;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
 
-  nav a:hover {
-    color: #0056b3;
-  }
+    .profile-image {
+      max-width: 250px;
+      width: 100%;
+      border-radius: 50%;
+      border: 4px solid #dee2e6;
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    }
 
-  section {
-    background-color: white;
-    margin: 20px auto;
-    padding: 20px;
-    width: 80%;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  }
+    .section-card {
+      border: none;
+      border-radius: 1rem;
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.08);
+    }
 
-  img.profile-image {
-    width: 200px;
-    border-radius: 10px;
-    display: block;
-    margin: 15px 0;
-  }
+    footer {
+      color: #6c757d;
+    }
+  </style>
+</head>
 
-  .button-link {
-    display: inline-block;
-    background-color: #007bff;
-    color: white;
-    padding: 10px 16px;
-    text-decoration: none;
-    border-radius: 5px;
-  }
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#top">KN Portfolio</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#mainNav"
+        aria-controls="mainNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-  .button-link:hover {
-    background-color: #0056b3;
-  }
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://www.uvu.edu/academic-coaching" target="_blank" rel="noopener noreferrer">
+              UVU
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-  footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #2c3e50;
-    color: white;
-    margin-top: 30px;
-  }
-</style>
-    <title>Kristen Nuesmeyer</title>
-  </head>
-  <body>
-    <!--Header Section -->
-    <header class="container mt-4" id="top">
-    <h1>Kristen Nuesmeyer Portfolio</h1>
-      <p>Welcome to my portfolio website. This site highlights my academic work, professional experience and projects.</p>
+  <main class="container pb-5">
+    <header class="hero" id="top">
+      <h1 class="display-4 fw-bold">Kristen Nuesmeyer Portfolio</h1>
+      <p class="lead mb-0">
+        Welcome to my portfolio website. This site highlights my academic work,
+        professional experience, and projects.
+      </p>
     </header>
 
-    <!--Navigation section -->
-    <nav class="container mb-4">
-      <ul>
-        <li><a href="#about">About Me</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="resume.html">Resume Page</a></li>
-        <li><a href="https://www.uvu.edu/academic-coaching" target="blank" rel="noopener noreferrer">UVU Website</a></li>
-      </ul>
-    </nav>
-      <!-- About Section -->
-  <section class="container mb-5" id="about">
-    <h2>About Me</h2>
-    <img
-      src="images/profile.jpg"
-      alt="Portrait of Kristen Nuesmeyer"
-      width="300"
-      class="profile-image"
-    >
-    <p>
-      I am a student and educator interested in learning, development, and
-      educational psychology. My portfolio showcases work that reflects my
-      academic growth and professional interests.
-    </p>
-  </section>
-  
-    <!-- Projects Section -->
-  <section class="container mb-5" id="projects">
-    <h2>Projects</h2>
-    <p>Here are a few areas I am working on and developing further:</p>
-    <ul>
-      <li>Portfolio website development</li>
-      <li>Educational psychology coursework</li>
-      <li>Research and writing projects</li>
-    </ul>
-  </section>
+    <section id="about" class="mb-5">
+      <div class="card section-card">
+        <div class="card-body p-4">
+          <div class="row align-items-center g-4">
+            <div class="col-md-4 text-center">
+              <img
+                src="images/profile.jpg"
+                alt="Portrait of Kristen Nuesmeyer"
+                class="profile-image img-fluid"
+              >
+            </div>
+            <div class="col-md-8">
+              <h2 class="card-title mb-3">About Me</h2>
+              <p class="card-text">
+                I am a student and educator interested in learning, development,
+                and educational psychology. My portfolio showcases work that
+                reflects my academic growth and professional interests.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <!-- Contact Section -->
-  <section class="container mb-5" id="contact">
-    <h2>Contact</h2>
-    <p>
-      You can reach me for professional or academic collaboration through email
-      or LinkedIn.
-    </p>
-    <p><a href="#top">Back to top</a></p>
-  </section>
+    <section id="projects" class="mb-5">
+      <div class="card section-card">
+        <div class="card-body p-4">
+          <h2 class="card-title mb-3">Projects</h2>
+          <p>Here are a few areas I am working on and developing further:</p>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Portfolio website development</li>
+            <li class="list-group-item">Educational psychology coursework</li>
+            <li class="list-group-item">Research and writing projects</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-  <!-- Footer Section -->
-  <footer class="container mt-4 mb-4" id="footer">
-    <p>&copy; 2026 Kristen Nuesmeyer</p>
-  </footer>
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-  </body>
+    <section id="contact" class="mb-5">
+      <div class="card section-card">
+        <div class="card-body p-4">
+          <h2 class="card-title mb-3">Contact</h2>
+          <p>
+            You can reach me for professional or academic collaboration through
+            email or LinkedIn.
+          </p>
+          <a href="#top" class="btn btn-primary">Back to top</a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="text-center pt-3 border-top">
+      <p class="mb-0">&copy; 2026 Kristen Nuesmeyer</p>
+    </footer>
+  </main>
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"
+  ></script>
+</body>
 </html>
