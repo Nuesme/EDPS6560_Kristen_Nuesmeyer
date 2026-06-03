@@ -1,11 +1,12 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8"> <!-- CHANGED: cleaned malformed code -->
+  <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- CHANGED -->
 
   <title>Kristen Nuesmeyer Portfolio</title>
 
+  <!-- CHANGED: Bootstrap 5 CSS kept and formatted correctly -->
   <link
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
     rel="stylesheet"
@@ -14,46 +15,162 @@
   >
 
   <style>
+    /* CHANGED: academic, more professional color palette */
     body {
-      background-color: #f8f9fa;
+      background-color: #f4f6f8;
+      color: #1f2a36;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     }
 
-    header.hero {
-      background: linear-gradient(135deg, #198754, #0d6efd);
-      color: white;
-      padding: 4rem 2rem;
-      border-radius: 1rem;
-      margin-top: 2rem;
-      margin-bottom: 2rem;
+    /* CHANGED: cleaner navbar styling */
+    .navbar-custom {
+      background-color: #1f3c5a;
+    }
+
+    .navbar-custom .navbar-brand,
+    .navbar-custom .nav-link {
+      color: #ffffff;
+    }
+
+    .navbar-custom .nav-link:hover,
+    .navbar-custom .nav-link:focus {
+      color: #d6e4f0;
+    }
+
+    /* CHANGED: hero uses flexbox and toned-down styling */
+    .hero {
+      background-color: #ffffff;
+      border-left: 6px solid #1f3c5a;
+      border-radius: 0.75rem;
+      padding: 3rem 2rem;
+      margin: 2rem 0;
+      box-shadow: 0 0.35rem 1rem rgba(0, 0, 0, 0.08);
+
+      display: flex;              /* CHANGED: flexbox */
+      flex-direction: column;     /* CHANGED: flexbox */
+      justify-content: center;    /* CHANGED: flexbox */
+      gap: 1rem;                  /* CHANGED: flexbox */
+    }
+
+    .hero h1 {
+      font-size: 2.25rem;
+      margin-bottom: 0;
+    }
+
+    .hero p {
+      font-size: 1.05rem;
+      max-width: 760px;
+      margin-bottom: 0;
+    }
+
+    /* CHANGED: shared card styling is more subtle */
+    .section-card {
+      border: 1px solid #d9e2ec;
+      border-radius: 0.75rem;
+      box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.05);
+    }
+
+    /* CHANGED: about section uses flexbox instead of only Bootstrap grid */
+    .about-flex {
+      display: flex;              /* CHANGED: flexbox */
+      flex-wrap: wrap;            /* CHANGED: flexbox */
+      align-items: center;        /* CHANGED: flexbox */
+      gap: 2rem;                  /* CHANGED: flexbox */
+    }
+
+    .about-image {
+      flex: 1 1 240px;            /* CHANGED: flexbox */
       text-align: center;
     }
 
-    .profile-image {
-      max-width: 250px;
-      width: 100%;
-      border-radius: 50%;
-      border: 4px solid #dee2e6;
-      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    .about-content {
+      flex: 2 1 360px;            /* CHANGED: flexbox */
     }
 
-    .section-card {
-      border: none;
-      border-radius: 1rem;
-      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.08);
+    .profile-image {
+      max-width: 220px;
+      width: 100%;
+      border-radius: 0.5rem;      /* CHANGED: less casual than a circle */
+      border: 1px solid #cbd5e1;
+      box-shadow: 0 0.35rem 0.85rem rgba(0, 0, 0, 0.08);
+    }
+
+    /* CHANGED: project items styled with flexbox for label + emphasis */
+    .project-list {
+      display: flex;              /* CHANGED: flexbox */
+      flex-direction: column;     /* CHANGED: flexbox */
+      gap: 0.75rem;               /* CHANGED: flexbox */
+      margin-top: 1rem;
+    }
+
+    .project-item {
+      display: flex;              /* CHANGED: flexbox */
+      align-items: center;        /* CHANGED: flexbox */
+      justify-content: space-between; /* CHANGED: flexbox */
+      gap: 1rem;
+      padding: 1rem 1.25rem;
+      background-color: #f8fafc;
+      border: 1px solid #d9e2ec;
+      border-radius: 0.5rem;
+    }
+
+    .project-tag {
+      background-color: #1f3c5a;
+      color: white;
+      font-size: 0.8rem;
+      padding: 0.35rem 0.65rem;
+      border-radius: 999px;
+      white-space: nowrap;
+    }
+
+    /* CHANGED: contact section uses flexbox */
+    .contact-flex {
+      display: flex;              /* CHANGED: flexbox */
+      flex-wrap: wrap;            /* CHANGED: flexbox */
+      justify-content: space-between; /* CHANGED: flexbox */
+      align-items: center;        /* CHANGED: flexbox */
+      gap: 1rem;                  /* CHANGED: flexbox */
+    }
+
+    .btn-academic {
+      background-color: #1f3c5a;
+      border-color: #1f3c5a;
+      color: #ffffff;
+    }
+
+    .btn-academic:hover {
+      background-color: #163047;
+      border-color: #163047;
+      color: #ffffff;
     }
 
     footer {
-      color: #6c757d;
+      color: #52606d;
+    }
+
+    /* CHANGED: small-screen flex adjustments */
+    @media (max-width: 768px) {
+      .hero {
+        padding: 2rem 1.5rem;
+      }
+
+      .project-item,
+      .contact-flex {
+        flex-direction: column;   /* CHANGED: flexbox responsiveness */
+        align-items: flex-start;  /* CHANGED */
+      }
     }
   </style>
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-    <div class="container">
-      <a class="navbar-brand" href="#top">KN Portfolio</a>
+  <!-- CHANGED: more professional navbar label and styling -->
+  <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+    <div class="container d-flex justify-content-between align-items-center"> <!-- CHANGED: flex utility -->
+      <a class="navbar-brand fw-semibold" href="#top">Kristen Nuesmeyer</a>
+
       <button
-        class="navbar-toggler"
+        class="navbar-toggler bg-light"
         type="button"
         data-bs-toggle="collapse"
         data-bs-target="#mainNav"
@@ -64,15 +181,15 @@
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div class="collapse navbar-collapse" id="mainNav">
-        <ul class="navbar-nav ms-auto">
+      <div class="collapse navbar-collapse justify-content-end" id="mainNav"> <!-- CHANGED: flex alignment -->
+        <ul class="navbar-nav">
           <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
           <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
           <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
           <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
           <li class="nav-item">
             <a class="nav-link" href="https://www.uvu.edu/academic-coaching" target="_blank" rel="noopener noreferrer">
-              UVU
+              UVU Academic Coaching
             </a>
           </li>
         </ul>
@@ -80,32 +197,35 @@
     </div>
   </nav>
 
-  <main class="container pb-5">
+  <main class="container py-4">
+    <!-- CHANGED: hero content rewritten to sound more academic -->
     <header class="hero" id="top">
-      <h1 class="display-4 fw-bold">Kristen Nuesmeyer Portfolio</h1>
-      <p class="lead mb-0">
-        Welcome to my portfolio website. This site highlights my academic work,
-        professional experience, and projects.
+      <h1 class="fw-bold">Kristen Nuesmeyer Portfolio</h1>
+      <p>
+        This portfolio presents my academic interests, professional experience,
+        and developing work in educational psychology, teaching, and applied scholarship.
       </p>
     </header>
 
     <section id="about" class="mb-5">
       <div class="card section-card">
         <div class="card-body p-4">
-          <div class="row align-items-center g-4">
-            <div class="col-md-4 text-center">
+          <div class="about-flex"> <!-- CHANGED: flexbox wrapper -->
+            <div class="about-image">
               <img
                 src="images/profile.jpg"
                 alt="Portrait of Kristen Nuesmeyer"
                 class="profile-image img-fluid"
               >
             </div>
-            <div class="col-md-8">
+
+            <div class="about-content">
               <h2 class="card-title mb-3">About Me</h2>
               <p class="card-text">
-                I am a student and educator interested in learning, development,
-                and educational psychology. My portfolio showcases work that
-                reflects my academic growth and professional interests.
+                I am a student and educator with interests in learning,
+                development, and educational psychology. My work reflects a
+                commitment to academic growth, professional practice, and the
+                thoughtful application of research to educational settings.
               </p>
             </div>
           </div>
@@ -116,13 +236,25 @@
     <section id="projects" class="mb-5">
       <div class="card section-card">
         <div class="card-body p-4">
-          <h2 class="card-title mb-3">Projects</h2>
-          <p>Here are a few areas I am working on and developing further:</p>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">Portfolio website development</li>
-            <li class="list-group-item">Educational psychology coursework</li>
-            <li class="list-group-item">Research and writing projects</li>
-          </ul>
+          <h2 class="card-title mb-3">Projects and Areas of Development</h2> <!-- CHANGED: more academic heading -->
+          <p>
+            The following items represent current areas of study, design, and professional development.
+          </p>
+
+          <div class="project-list"> <!-- CHANGED: flexbox container -->
+            <div class="project-item">
+              <span>Portfolio website development</span>
+              <span class="project-tag">Digital Design</span>
+            </div>
+            <div class="project-item">
+              <span>Educational psychology coursework</span>
+              <span class="project-tag">Academic Work</span>
+            </div>
+            <div class="project-item">
+              <span>Research and writing projects</span>
+              <span class="project-tag">Scholarship</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -131,11 +263,15 @@
       <div class="card section-card">
         <div class="card-body p-4">
           <h2 class="card-title mb-3">Contact</h2>
-          <p>
-            You can reach me for professional or academic collaboration through
-            email or LinkedIn.
-          </p>
-          <a href="#top" class="btn btn-primary">Back to top</a>
+
+          <div class="contact-flex"> <!-- CHANGED: flexbox layout -->
+            <p class="mb-0">
+              For professional or academic collaboration, please connect through
+              email, LinkedIn, or related institutional channels.
+            </p>
+
+            <a href="#top" class="btn btn-academic">Back to top</a>
+          </div>
         </div>
       </div>
     </section>
@@ -145,6 +281,7 @@
     </footer>
   </main>
 
+  <!-- CHANGED: Bootstrap 5 bundle -->
   <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
