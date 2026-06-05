@@ -63,6 +63,30 @@
       box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.05);
     }
 
+    .accordion-button {
+      font-weight: 600;
+      color: #1f2a36;
+      background-color: #f8fafc;
+    }
+
+    .accordian-button:not(.collapsed) {
+      color:#ffffff;
+      background-color: #1f3c5a;
+      box-shadow: none;
+    }
+
+    .accordion-button:focus {
+      box-shadow: 0 0 0 0.2rem rgba(31, 60, 90, 0.2);
+    }
+
+    .accordion-item {
+      border: 1px solid #d9e2ec;
+    }
+
+    .accordion-body {
+      background-color: #ffffff;
+    }
+    
     .about-flex {
       display: flex;
       flex-wrap: wrap;
@@ -226,25 +250,99 @@
           <p>
             The following items represent current areas of study, design, and professional development.
           </p>
+<!--update accordians-->>
+         <div class="accordion" id="portfolioAccordion">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingCoursework">
+            <button
+              class="accordion-button"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseCoursework"
+              aria-expanded="true"
+              aria-controls="collapseCoursework"
+            >
+              Educational Psychology Coursework
+            </button>
+          </h2>
+          <div
+            id="collapseCoursework"
+            class="accordion-collapse collapse show"
+            aria-labelledby="headingCoursework"
+            data-bs-parent="#portfolioAccordion"
+          >
+            <div class="accordion-body">
+              <ul class="mb-0">
+                <li>Teaching with AI</li>
+                <li>Multimedia Learning</li>
+                <li>Learning Science Research</li>
+                <li>Learning Science Seminar</li>
+              </ul>
+            </div>
+          </div>
+        </div>
 
-          <div class="project-list">
-            <div class="project-item">
-              <span>Portfolio website development</span>
-              <span class="project-tag">Digital Design</span>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingProfessional">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseProfessional"
+              aria-expanded="false"
+              aria-controls="collapseProfessional"
+            >
+              Professional Development Presentations
+            </button>
+          </h2>
+          <div
+            id="collapseProfessional"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingProfessional"
+            data-bs-parent="#portfolioAccordion"
+          >
+            <div class="accordion-body">
+              <ul class="mb-0">
+                <li>UVULead Facilitator</li>
+                <li>Cultural Competency Facilitator</li>
+                <li>ADHD Coach Course Instructor</li>
+              </ul>
             </div>
-            <div class="project-item">
-              <span>Educational psychology coursework</span>
-              <span class="project-tag">Academic Work</span>
-            </div>
-            <div class="project-item">
-              <span>Research and writing projects</span>
-              <span class="project-tag">Scholarship</span>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingResearch">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseResearch"
+              aria-expanded="false"
+              aria-controls="collapseResearch"
+            >
+              Research and Writing
+            </button>
+          </h2>
+          <div
+            id="collapseResearch"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingResearch"
+            data-bs-parent="#portfolioAccordion"
+          >
+            <div class="accordion-body">
+              <ul class="mb-0">
+                <li>Translating Research into Pedagogy</li>
+                <li>Higher Education Academic At-Risk Students</li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
-    </section>
-
+    </div>
+  </div>
+</section> 
+  
     <section id="contact" class="mb-5">
       <div class="card section-card">
         <div class="card-body p-4">
